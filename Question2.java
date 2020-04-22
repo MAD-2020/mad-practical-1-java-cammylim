@@ -3,13 +3,15 @@ public class Question2 {
   public static void main(String[] args) {
     
     Scanner in = new Scanner(System.in);
-    System.out.print("Enter your height: ");
+    System.out.print("Enter your height (in m): ");
     double height = in.nextDouble();
     System.out.print("Enter your weight: ");
     double weight = in.nextDouble();
-    String h1 = String.format("Your height is: %.2f",height);
-    String h2 = String.format("Your weight is: %.2f",weight);
-    System.out.print(h1);
-    System.out.print(h2);
+    double bmi = (weight / (height * height));
+    System.out.print("Your height is: " + height + "\n");
+    System.out.print("Your weight is: " + weight + 
+    "\n");
+    String b = String.format("Your BMI is: %.2f",bmi);
+    System.out.print(b);
   }
 }
